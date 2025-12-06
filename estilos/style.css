@@ -233,39 +233,48 @@ label, .card-head p{user-select:none}
 
   .topbar {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 6px;
+    text-align: center;
   }
 
   .brand {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    max-width: 100%;
+    justify-content: center;
   }
 
   .brand .logo {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
   }
 
   .brand-text h1 {
-    font-size: 1rem;
-    line-height: 1.1;
+    font-size: 1.05rem;
+    white-space: nowrap;
   }
 
   .brand-text .tag {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
   }
 
-  /* botão tema */
+  /* botão de tema não pode empurrar nada */
+  .controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   #themeToggle {
-    align-self: flex-end;
+    margin-top: 4px;
   }
 
-  /* Main card spacing */
+  /* card compacto */
   .card {
     padding: 14px;
+    width: 100%;
   }
 
   .card-head h2 {
@@ -273,6 +282,17 @@ label, .card-head p{user-select:none}
   }
 
   .card-head .muted {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
   }
+
+  /* evitar corte do header no mobile */
+.topbar {
+  padding-inline: 8px;
+}
+
+/* texto não quebrar estranho */
+.brand-text h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 }
