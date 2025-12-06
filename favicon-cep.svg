@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Favicon CEP">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#00b4ff"/>
+      <stop offset="1" stop-color="#0066ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background circle -->
+  <rect width="64" height="64" rx="12" fill="url(#g1)"/>
+
+  <!-- map pin (white) -->
+  <path d="M32 14c-5.523 0-10 4.477-10 10 0 6.667 10 20 10 20s10-13.333 10-20c0-5.523-4.477-10-10-10z" fill="#ffffff" opacity="0.95"/>
+
+  <!-- inner circle in pin -->
+  <circle cx="32" cy="24" r="4.8" fill="#00b4ff"/>
+
+  <!-- small envelope icon on top (symbolizing CEP/postal) -->
+  <g transform="translate(18,34)">
+    <rect x="0" y="0" width="28" height="14" rx="2" fill="#ffffff" opacity="0.98"/>
+    <path d="M0 0 L14 9 L28 0" fill="none" stroke="#00a0e6" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M0 0 L14 9 L28 0" fill="none" stroke="#0077cc" stroke-width="0.6" opacity="0.6"/>
+  </g>
+</svg>
