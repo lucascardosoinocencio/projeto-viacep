@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Via Cep</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+<body>
+<div class="app-wrapper">
+
+    <!-- top bar -->
+    <header class="topbar">
+      <div class="brand" aria-hidden="false">
+        <svg class="logo" viewBox="0 0 64 64" width="44" height="44" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#00b4ff"/>
+              <stop offset="1" stop-color="#0066ff"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="10" width="60" height="44" rx="8" fill="url(#g)"></rect>
+          <path d="M18 24h28v4H18zM18 34h18v4H18z" fill="rgba(255,255,255,0.95)"></path>
+        </svg>
+        <div class="brand-text">
+          <h1>CepNavigator</h1>
+          <p class="tag">Rápido, simples e preciso</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Alternar tema">
+          <span class="icon">🌞</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="card" id="card" role="region" aria-labelledby="card-title">
+        <div class="card-head">
+          <h2 id="card-title">Buscar CEP</h2>
+          <p class="muted">Digite o CEP (somente números) e encontre o endereço pelo ViaCEP.</p>
+        </div>
+
+        <form id="form-cep" autocomplete="off">
+          <label for="cep">CEP</label>
+          <input id="cep" name="cep" inputmode="numeric" pattern="\d*" maxlength="9" placeholder="Ex: 01001-000">
+
+          <button type="button" id="btnBuscar" class="btn-primary">
+            <span id="btnText">Buscar CEP</span>
+            <span class="loader" id="loader"></span>
+          </button>
+
+          <div class="result-grid">
+            <div class="field">
+              <label for="rua">Rua</label>
+              <input id="rua" name="rua" readonly>
+            </div>
+            <div class="field">
+              <label for="bairro">Bairro</label>
+              <input id="bairro" name="bairro" readonly>
+            </div>
+            <div class="field">
+              <label for="cidade">Cidade</label>
+              <input id="cidade" name="cidade" readonly>
+            </div>
+            <div class="field small">
+              <label for="uf">UF</label>
+              <input id="uf" name="uf" readonly>
+            </div>
+            <div class="field small">
+              <label for="ibge">IBGE</label>
+              <input id="ibge" name="ibge" readonly>
+            </div>
+
+            <!-- POPULAÇÃO IGUAL AS OUTRAS -->
+            <div class="field">
+              <label for="populationValue">População</label>
+              <input id="populationValue" name="populationValue" readonly>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="history">
+          <div class="history-head">
+            <h3>Histórico</h3>
+            <button id="clearHistory" class="link-btn">Limpar</button>
+          </div>
+          <ul id="historyList" class="history-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>🔍 CepNavigator — todos os direitos reservados ©</small>
+    </footer>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
