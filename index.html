@@ -8,13 +8,13 @@
     <link rel="icon" type="image/svg+xml" href="favicon-cep.svg">
 </head>
 <body>
-<body>
+
 <div class="app-wrapper">
 
     <!-- top bar -->
     <header class="topbar">
-      <div class="brand" aria-hidden="false">
-        <svg class="logo" viewBox="0 0 64 64" width="44" height="44" aria-hidden="true">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" width="44" height="44">
           <defs>
             <linearGradient id="g" x1="0" x2="1">
               <stop offset="0" stop-color="#00b4ff"/>
@@ -24,6 +24,7 @@
           <rect x="2" y="10" width="60" height="44" rx="8" fill="url(#g)"></rect>
           <path d="M18 24h28v4H18zM18 34h18v4H18z" fill="rgba(255,255,255,0.95)"></path>
         </svg>
+
         <div class="brand-text">
           <h1>CepNavigator</h1>
           <p class="tag">Rápido, simples e preciso</p>
@@ -37,9 +38,10 @@
       </div>
     </header>
 
+
     <!-- Main -->
     <main>
-      <section class="card" id="card" role="region" aria-labelledby="card-title">
+      <section class="card" id="card" aria-labelledby="card-title">
         <div class="card-head">
           <h2 id="card-title">Buscar CEP</h2>
           <p class="muted">Digite o CEP (somente números) e encontre o endereço pelo ViaCEP.</p>
@@ -55,43 +57,51 @@
           </button>
 
           <div class="result-grid">
+
             <div class="field">
               <label for="rua">Rua</label>
               <input id="rua" name="rua" readonly>
             </div>
+
             <div class="field">
               <label for="bairro">Bairro</label>
               <input id="bairro" name="bairro" readonly>
             </div>
+
             <div class="field">
               <label for="cidade">Cidade</label>
               <input id="cidade" name="cidade" readonly>
             </div>
+
             <div class="field small">
               <label for="uf">UF</label>
               <input id="uf" name="uf" readonly>
             </div>
+
             <div class="field small">
               <label for="ibge">IBGE</label>
               <input id="ibge" name="ibge" readonly>
             </div>
 
-            <!-- POPULAÇÃO IGUAL AS OUTRAS -->
+            <!-- População igual as outras -->
             <div class="field">
               <label for="populationValue">População</label>
               <input id="populationValue" name="populationValue" readonly>
             </div>
-          </div>
 
+          </div>
         </form>
 
+        <!-- Histórico -->
         <div class="history">
           <div class="history-head">
             <h3>Histórico</h3>
             <button id="clearHistory" class="link-btn">Limpar</button>
           </div>
+
           <ul id="historyList" class="history-list"></ul>
         </div>
+
       </section>
     </main>
 
@@ -99,10 +109,11 @@
       <small>🔍 CepNavigator — todos os direitos reservados ©</small>
     </footer>
 
+    <!-- Toasts -->
     <div id="toastContainer" class="toast-container"></div>
 
-  </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

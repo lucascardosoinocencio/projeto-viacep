@@ -24,7 +24,7 @@ body{
   justify-content:center;
 }
 
-/* Background image fallback: use fundo.jpg if exists (override gradient) */
+/* Background image fallback */
 body.has-bg {
   background: url('fundo.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -216,7 +216,7 @@ label, .card-head p{user-select:none}
   width: 8px;
 }
 .history-list::-webkit-scrollbar-thumb{
-  background: rgba(0,0,0,0.15);
+ 	background: rgba(0,0,0,0.15);
   border-radius: 8px;
 }
 .history-list::-webkit-scrollbar-thumb:hover{
@@ -229,6 +229,10 @@ label, .card-head p{user-select:none}
   transition: opacity .2s;
 }
 
+/* ===================== */
+/* MOBILE FIX ABSOLUTO   */
+/* ===================== */
+
 @media(max-width: 480px) {
 
   .topbar {
@@ -238,6 +242,7 @@ label, .card-head p{user-select:none}
     width: 100%;
     gap: 6px;
     text-align: center;
+    padding-inline: 8px;
   }
 
   .brand {
@@ -254,13 +259,14 @@ label, .card-head p{user-select:none}
   .brand-text h1 {
     font-size: 1.05rem;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand-text .tag {
     font-size: 0.72rem;
   }
 
-  /* botão de tema não pode empurrar nada */
   .controls {
     width: 100%;
     display: flex;
@@ -271,7 +277,6 @@ label, .card-head p{user-select:none}
     margin-top: 4px;
   }
 
-  /* card compacto */
   .card {
     padding: 14px;
     width: 100%;
@@ -284,15 +289,4 @@ label, .card-head p{user-select:none}
   .card-head .muted {
     font-size: 0.8rem;
   }
-
-  /* evitar corte do header no mobile */
-.topbar {
-  padding-inline: 8px;
-}
-
-/* texto não quebrar estranho */
-.brand-text h1 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 }
